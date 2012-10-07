@@ -8,4 +8,9 @@ class WeightsController < ApplicationController
     render :nothing => true
   end
 
+  def lookup
+    @weight = user.weight
+    render :text => JSON::parse(@weight.to_json(:include=>:weight))
+  end
+
 end

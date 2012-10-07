@@ -14,8 +14,9 @@
         = link_to "Sign out", sign_out_path, :rel => "external"
     - else
       %div
-%div
-  %h3 hihi
-  = link_to image_tag(asset_path("facebook.png")), "/auth/facebook", :rel => "external"
+%div.container
+  %div.body
+    %div.login
+      = link_to image_tag(asset_path("fblarge.png")), "/auth/facebook", :rel => "external"
 
   

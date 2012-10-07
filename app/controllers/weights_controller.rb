@@ -10,7 +10,7 @@ class WeightsController < ApplicationController
 
   def lookup
     user = User.find_by_email(params["email"])
-    if user.weight
+    if user.weight != nil
       render :json => {:weight => user.weight}
     else
       render :json => {:weight => nil}

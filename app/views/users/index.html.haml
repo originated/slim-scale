@@ -16,9 +16,20 @@
     - else
       %div
 %div.container
-  %div.body
-    %div.login
-      %h2 SLIMSCALE is reinventing the way you interact with fitness devices
-      = link_to image_tag(asset_path("fblarge.png")), "/auth/facebook", :rel => "external"
+  %div.body.results
+    %table
+      %th
+      %th name
+      %th weight
+      - @users.each do |user|
+        %tr
+          %td
+            %img{:src => "https://graph.facebook.com/#{user.authentications.first.uid}/picture?type=large"}
+          %td= user.name
+          - if user.weight != nil
+            %td= user.weight
+          - else
+            %td N/A
 
-  
+
+

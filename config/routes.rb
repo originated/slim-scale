@@ -17,6 +17,8 @@ SlimScale::Application.routes.draw do
   match 'lookup' => "weights#lookup"
   
   get "pages/home"
+
+  resources :users
   
 
   root :to => "pages#home"

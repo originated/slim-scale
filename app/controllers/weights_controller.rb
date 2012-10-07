@@ -1,10 +1,10 @@
 class WeightsController < ApplicationController
   
   def create
-    # debugger
-    user = params["user"]
-    weight = params["weight"]
-    
+    user = User.find_by_email(params["email"])
+    if user
+      user.update_attributes({:weight => params["weight"]})
+    end
     render :nothing => true
   end
 

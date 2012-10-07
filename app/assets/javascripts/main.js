@@ -17,9 +17,8 @@ $(document).ready(function() {
 						type: 'get',
 						success:function (res) {
 							console.log('res',res);
-							if(true){
-								console.log('ya');
-							} else {
+							if(res['weight'] !== "nil"){
+								console.log('ya',res['weight']);
 								clearInterval(pinger);
 							}
 						},

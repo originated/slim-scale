@@ -6,17 +6,23 @@ $(document).ready(function() {
 		},
 		trackWeightButton: function(){
 			$('#track-weight').click(function(){
-				$.ajax({
-	                url:'/mike_controller',
-	                dataType: 'json',
-	                type: 'get',
-	                success:function (resArr) {
-	                    // convert response string to array, merge with billBoards arr, then pass to callback
-	                },
-					error: function(res){
-						console.log('boohooo! ajax error');
-					}
-	            });
+				var pinger = setInterval(function(){
+					$.ajax({
+						url:'/lookup',
+						dataType: 'json',
+						type: 'get',
+						success:function (res) {
+							if(true){
+								console.log('ya');
+							} else {
+								clearInterval(pinger);
+							}
+						},
+						error: function(res){
+							console.log('boohooo! ajax error');
+						}
+					});
+				},1000)
 			});
 		}
 	}

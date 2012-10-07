@@ -19,6 +19,8 @@ SlimScale::Application.routes.draw do
   get "pages/home"
 
   resources :users
+
+  match 'results' => "users#index"
   
 
   root :to => "pages#home"

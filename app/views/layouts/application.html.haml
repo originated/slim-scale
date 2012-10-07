@@ -12,7 +12,8 @@
     = stylesheet_link_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"
 
     = stylesheet_link_tag "application"  
-
+	= javascript_include_tag "application"
+    = javascript_include_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"
 
     = yield(:head)
 
@@ -33,6 +34,4 @@
       %div{"data-role" => "content"}
         = yield
 
-    
-    = javascript_include_tag "application"
-    = javascript_include_tag "http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"
+

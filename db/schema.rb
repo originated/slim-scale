@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007183218) do
+ActiveRecord::Schema.define(:version => 20121007195915) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20121007183218) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "email"
-    t.integer  "weight"
+    t.float    "weight"
   end
 
 end

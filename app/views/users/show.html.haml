@@ -2,7 +2,7 @@
   = "Hi #{@user.name}!"
 
 :css
-  table {
+  table#qr-code {
     border-width: 0;
     border-style: none;
     border-color: #0000ff;
@@ -21,7 +21,7 @@
   td.black { background-color: #000; }
   td.white { background-color: #fff; }
 
-%table
+%table#qr-code
   - @qr.modules.each_index do |x|
     %tr
       - @qr.modules.each_index do |y|
@@ -32,9 +32,9 @@
 #digital-scale
   #measurement
     %ul
-      %li#whole
-      %li#point ya
-      %li#fraction
+      %li#whole.value 100
+      %li#point .
+      %li#fraction.value 22
 
 %button#track-weight{"data-role"=>"button","data-theme"=>"a","data-facebook-id"=>"#{@user.email}"}
   Track Weight

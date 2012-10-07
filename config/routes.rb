@@ -9,6 +9,8 @@ SlimScale::Application.routes.draw do
 
   resources :authentications
   
+  match 'post-weight' => 'weights#create'
+  
   match '/auth/:provider/callback' => 'authentications#create'
   match '/auth/failure' => 'sessions#failure'
   match 'sign_out' => 'sessions#destroy'

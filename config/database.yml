@@ -30,8 +30,8 @@ production:
   adapter: postgresql
   encoding: utf8
   reconnect: false
-  database: ss_production
+  database: c2-54-243-250-81.compute-1.amazonaws.com:5432/dfdccoakrd2t4t
   pool: 5
-  username: root
-  password:
+  username: drtsbpjfemqoyt
+  password: 0bwnMd-_N6TOKH5n6bQC0UsTJ7
   socket: /tmp/mysql.sock

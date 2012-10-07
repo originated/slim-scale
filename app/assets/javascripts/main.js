@@ -5,8 +5,8 @@ $(document).ready(function() {
 			self.trackWeightButton();
 		},
 		trackWeightButton: function(){
+			var self = this;
 			$('#track-weight').click(function(){
-				console.log('clicked');
 				var pinger = setInterval(function(){
 					$.ajax({
 						url:'/lookup',
@@ -16,10 +16,9 @@ $(document).ready(function() {
 						},
 						type: 'get',
 						success:function (res) {
-							console.log('res',res);
 							if(res['weight'] !== "nil"){
-								console.log('ya',res['weight']);
 								clearInterval(pinger);
+								self.showDigitalScale(res['weight']);
 							}
 						},
 						error: function(res){
@@ -28,6 +27,9 @@ $(document).ready(function() {
 					});
 				},1000)
 			});
+		},
+		showDigitalScale: function(weight){
+			console.log('inside showDigitalScale, ',weight);
 		}
 	}
 

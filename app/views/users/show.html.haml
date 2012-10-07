@@ -29,12 +29,12 @@
           %td.black/
         - else
           %td.white/
-#digital-scale
-  #measurement
-    %ul
-      %li#whole.value 100
-      %li#point .
-      %li#fraction.value 22
+#digital-scale.value
+  / #measurement
+  /   %ul
+  /     %li#whole.value 100
+  /     %li#point .
+  /     %li#fraction.value 22
 
 %button#track-weight{"data-role"=>"button","data-theme"=>"a","data-facebook-id"=>"#{@user.email}"}
   Track Weight

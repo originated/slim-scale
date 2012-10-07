@@ -9,8 +9,8 @@ class WeightsController < ApplicationController
   end
 
   def lookup
-    @weight = user.weight
-    render :text => JSON::parse(@weight.to_json(:include=>:weight))
+    user = User.find_by_email(params["email"])
+    render :json => {:weight => user.weight}
   end
 
 end

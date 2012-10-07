@@ -17,7 +17,7 @@ $(document).ready(function() {
 						},
 						type: 'get',
 						success:function (res) {
-							if(res['weight'] !== "nil"){
+							if(res['weight'] !== null){
 								clearInterval(pinger);
 								self.showDigitalScale(res['weight']);
 							}

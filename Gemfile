@@ -8,6 +8,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'jquery-rails', '=2.0.1'
 gem 'thin'
+gem 'haml'
+gem 'haml-rails'
 
 # gem 'omniauth'
 # gem 'omniauth', '~> 0.2.6'
@@ -22,8 +24,6 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'haml'
-  gem 'haml-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 

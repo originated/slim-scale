@@ -1,1 +1,18 @@
-%h1 Welcome
+- content_for :heading do
+  SlimFit!
+  .login
+    - if session[:uid].present?
+      %div
+        = session[:name]
+      %div
+        = image_tag session[:avatar]
+      %div
+        = session[:provider]
+      %div
+        %img{:src => "/images/authbuttons/png/#{session[:provider]}_32.png"}
+      %div
+        = link_to "Sign out", sign_out_path
+    - else
+      %div
+        = link_to "Sign in with Facebook", "/auth/facebook", :rel => "external"
+  

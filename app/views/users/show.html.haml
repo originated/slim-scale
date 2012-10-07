@@ -1,3 +1,6 @@
+- content_for :heading do
+  = "Hi #{@user.name}!"
+
 :css
   table {
     border-width: 0;
@@ -26,5 +29,5 @@
           %td.black/
         - else
           %td.white/
-
-= @user.email
+%button#track-weight{"data-role"=>"button","data-theme"=>"a"}
+  Track Weight

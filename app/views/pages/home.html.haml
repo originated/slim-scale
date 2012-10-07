@@ -11,7 +11,7 @@
       %div
         %img{:src => "/images/authbuttons/png/#{session[:provider]}_32.png"}
       %div
-        = link_to "Sign out", sign_out_path
+        = link_to "Sign out", sign_out_path, :rel => "external"
     - else
       %div
         = link_to "Sign in with Facebook", "/auth/facebook", :rel => "external"

@@ -1,6 +1,5 @@
 - content_for :heading do
   = "Hi #{@user.name}!"
-  = link_to "All User Results", users_path, "data-role" => "button", "data-inline" => "true"
 
 :css
   table#qr-code {
@@ -37,3 +36,5 @@
 
 %button#track-weight{"data-role"=>"button","data-theme"=>"a","data-facebook-id"=>"#{@user.email}"}
   Track Weight
+%br
+= link_to "All User Results", users_path, "data-role" => "button"

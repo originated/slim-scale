@@ -1,6 +1,6 @@
 - content_for :heading do
-  %img{:src => asset_path('slim.png')}
   .login
+    %h2.logo SLIMSCALE
     - if session[:uid].present?
       %div
         = session[:name]
@@ -9,7 +9,8 @@
       %div
         = session[:provider]
       %div
-        %img{:src => "/images/authbuttons/png/#{session[:provider]}_32.png"}
+        //not sure if we need this image, causing a broken image
+        //%img{:src => "/images/authbuttons/png/#{session[:provider]}_32.png"}
       %div
         = link_to "Sign out", sign_out_path, :rel => "external"
     - else

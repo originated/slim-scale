@@ -6,6 +6,10 @@
  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7DC8DD), color-stop(1, #64B0C8))
 }
 
+.ui-title {
+ text-align: center;
+}
+
 .ui-content {
  margin-top: 40px;
  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EFEDE5), color-stop(1, #F0EEE5))
@@ -17,5 +21,14 @@
 
 .container {
  text-align: center;
+}
+
+h2.logo {
+ font: sans-serif;
+ font-weight: lighter;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
 }
 

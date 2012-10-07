@@ -6,7 +6,8 @@ gem 'rqrcode' # Ruby library that encodes QR Codes - https://github.com/whomwah/
 gem 'omniauth', :git => 'git://github.com/intridea/omniauth.git'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-gem 'jquery-rails', '=2.0.1' 
+gem 'jquery-rails', '=2.0.1'
+gem 'thin'
 
 # gem 'omniauth'
 # gem 'omniauth', '~> 0.2.6'
@@ -22,6 +23,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'haml'
+  gem 'haml-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 

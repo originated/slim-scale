@@ -1,4 +1,4 @@
-@font-face {
+font-face {
     font-family: 'BebasNeueRegular';
     src: url('BebasNeue-webfont.eot');
     src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
@@ -25,12 +25,13 @@
 
 #qr-code {
 	margin:0 auto;
+	margin-bottom:50px;
 }
 
 #digital-scale {
+	font-size:5em;
 	display:none;
 	font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; 
-	font-size:36px; 
 	text-align:center; 
 	text-shadow:0 0 5px #00c6ff;
 	ul {
@@ -49,4 +50,15 @@
 	position:relative; -moz-animation:mymove 1s ease infinite; 		  -webkit-animation:mymove 1s ease infinite; 
 	padding-left:10px; 
 	padding-right:10px; 
+}
+
+
+#loader {
+	display:none;
+	margin:0 auto;
+	margin-top:-340px;
+	margin-bottom:50px;
+	width:290px;
+	height:293px;
+	background: white asset-data-url('loading.gif') no-repeat center center;
 }

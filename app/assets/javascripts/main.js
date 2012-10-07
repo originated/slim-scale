@@ -7,6 +7,7 @@ $(document).ready(function() {
 		trackWeightButton: function(){
 			var self = this;
 			$('#track-weight').click(function(){
+				$('#loader').show();
 				var pinger = setInterval(function(){
 					$.ajax({
 						url:'/lookup',
@@ -29,8 +30,8 @@ $(document).ready(function() {
 			});
 		},
 		showDigitalScale: function(weight){
+			$('#loader').hide();
 			$('#digital-scale').show().html(weight);
-			// console.log('inside showDigitalScale, ',weight);
 		}
 	}
 

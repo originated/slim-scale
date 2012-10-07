@@ -29,6 +29,7 @@ $(document).ready(function() {
 			});
 		},
 		showDigitalScale: function(weight){
+			$('#digital-scale').show();
 			console.log('inside showDigitalScale, ',weight);
 		}
 	}
